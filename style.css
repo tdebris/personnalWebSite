@@ -35,7 +35,7 @@ ul {
     margin:1px;
     padding:5px;
     padding-left: 20px; 
-    list-style-image: url(img/bullet_s.svg);
+    list-style-type: circle;
     background-position: 20% 0.4em;
     font-size: 1.2em;
 
@@ -45,7 +45,7 @@ li {
     font-size: 10px;
     margin:1px;
     padding:2px;
-    list-style-image: url(img/bullet_s.svg);
+    list-style-type: circle;
     font-size: 1em;
 
 }
@@ -55,7 +55,7 @@ li.award
     font-size: 10px;
     margin:1px;
     padding:3px;
-    list-style-image: url(img/ribbon.svg);
+    list-style-type: circle;
     font-size: 1em;
 
 }
