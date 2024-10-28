@@ -1,572 +1,223 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-
-<TITLE>
-   Thomas Debris-Alazard
-</TITLE>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-
+    <meta charset="UTF-8">
+    <title>Thomas Debris-Alazard</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style>
+    		body {
+            line-height: 1.6;
+        }
+        h2 {
+            font-size: 1.85em;
+            margin-bottom: 0.3em;
+    }
+    #content > *:not(h2) { 
+        margin-top: 0;
+    }
+        ul li {
+            margin-bottom: 0.75em;
+        }
+        .authors {
+            display: block;
+            margin-top: 0.2em;
+        }
+        .conference-title {
+            display: block;
+            font-style: italic;
+            margin-top: 0.2em;
+        }
+    </style>
+</head>
 <body onload="displayAll()">
-
-<div id="wrap">
-  <div id="top">
-    <h2>  Thomas Debris-Alazard </h2>
-  </div>
-
-
-
-
-<div id="content">
-	<div style="font-family:Verdana,Calibri">
-	<H2> <FONT size="5pt"> About  </FONT> </H2>
-	<a class="anchor" name="About"> </a> 
-		
-		I am a research scientist (charg&eacute; de recherche) at <a href="https://www.inria.fr/fr"> Inria</a> in the <a href ="https://team.inria.fr/grace/"> Grace</a> project-team and part-time assistant professor at École Polytechnique.
-	 My main research interests are code and lattice-based cryptography.
-
-		<p> </p>
-
-
-		<table>
-		<td>
-		<img class="profile-pic" src="photo2.jpeg" >
-		</td>
-		<td>
-	
-
-<div STYLE="font-size:10" >
-<img src="cezanne.jpg" height="130" style="width:280px">
-<br>
-"Montagne Sainte-Victoire, Paul Cézanne."
-
-
-</td>
-<td>
-
-<br>
-</td>
-</TABLE>
-
-
-<br>
-<a href="Debris_CV.pdf"> Resume (PDF)</a>
-<br>
-<a href="https://scholar.google.com/citations?user=jWWLx-kAAAAJ&hl=en"> Google Scholar Profile</a>
-<br>
-<a href="https://dblp.org/pers/hd/d/Debris=Alazard:Thomas"> DBLP </a>
-<br>
-
-
-<BLOCKQUOTE>
-<ADDRESS>
-<strong>Address:</strong> <a href="https://www.lix.polytechnique.fr/">Laboratoire LIX</a><br> 
-&Eacute;cole Polytechnique.
-<br> 91128 PALAISEAU CEDEX
-<br> Office 2047 <br>
-<B>E-mail:</B> <a href="mailto:thomas.debris@inria.fr"> thomas &delta;ot debris at inria &delta;ot fr <BR>
-</ADDRESS>
-</BLOCKQUOTE>
-
-
-
-
-	</div>
-
-
-<a class="anchor" name="Publi">  </a>
-
-
-
-
-<h2> <FONT size="5pt"> Teaching </FONT> </h2>
-
-	<ul>
-		<li> Code-based Cryptography (<a href = "https://arxiv.org/pdf/2304.03541.pdf">lecture notes</a>, work in progress)
-			<ul>
-
-				<li>	<a href="lecture1.pdf"><i><FONT size="2pt"> An intractable problem related to codes, decoding</FONT></i></a>  
-				</li>
-				<li>
-					<FONT size="2pt">
-					<a href="lecture2.pdf"><i>Random codes</i></a>
-					</FONT>
-				</li>
-
-				
-				<li>
-					<FONT size="2pt">
-					<a href="lecture3.pdf"><i>Information set decoding algorithms</i></a>
-					</FONT>
-				</li>
-			</ul>
-		</li>
-	</ul>
-
-	<ul>
-		<li>
-				<a href= "quantum.html">Introduction to quantum computer science and applications</a> (INF587, &Eacute;cole Polytechnique)
-		</li>
-</ul>
-
-<h2> <FONT size="5pt"> PhD Students </FONT> </h2>
-
-	<ul>
-		<li>
-				Pierre Loisel</a> (2023 -) (co-advised with <a href = "http://www.lix.polytechnique.fr/Labo/Alain.Couvreur/">Alain Couvreur</a>)
-		</li>
-	</ul>
-
-	<ul>
-		<li>
-				<a href = "http://www.lix.polytechnique.fr/Labo/Maxime.BOMBAR/">Maxime Bombar</a> (2020 - 2023), defended on December 15, 2023 (co-advised with <a href = "http://www.lix.polytechnique.fr/Labo/Alain.Couvreur/">Alain Couvreur</a>)
-		</li>
-	</ul>
-
-
-	<h2> <FONT size="5pt"> Manuscript </FONT> </h2>
-	<ul> 
-		<li>
-				<a href="https://tel.archives-ouvertes.fr/tel-02424234v1"> PhD</a> (in french), defended on December 17, 2019 </a>			
-		</li>
-	</ul>
-
-
-	<h2> <FONT size="5pt"> Wave </FONT> </h2>
-
-	<ul>
-		<li>
-				<a href = "https://wave-sign.org">Wave</a> is a post-quantum signature scheme based on hard problems in coding theory which has been submitted to the <a href = "https://csrc.nist.gov/projects/pqc-dig-sig/round-1-additional-signatures">standardization process</a> launched by the NIST in 2023 (some <a href="wave.pdf"><i>slides</i></a>)
-		</li>
-	</ul>
-
-
-
-<h2> <FONT size="5pt"> Publications </FONT></h2>
-
-<ul>
-		<li>
-			<span>
-				<a href = "https://arxiv.org/abs/2405.07666">New Solutions to Delsarte's Dual Linear Programs
-				</a>
-				<br>
-			</span>
-			<span>
-				André Chailloux and Thomas Debris-Alazard
-				<br>
-			</span>
-			<span>
-				IEEE IT 2024
-				<br>
-			</span>
-		</li>
-	</ul> 
-
-
-<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2024/1134">Exploiting signature leakages: breaking Enhanced pqsigRM
-				</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard, Pierre Loisel and Valentin Vasseur
-				<br>
-			</span>
-			<span>
-				Isit 2024
-				<br>
-			</span>
-		</li>
-	</ul> 
-
-
-
-
-<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2024/30">Quantum Oblivious LWE Sampling and Insecurity of Standard Model Lattice-Based SNARKs
-				</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard, Pouria Fallahpour and Damien Stehlé
-				<br>
-			</span>
-			<span>
-				STOC 2024
-				<br>
-			</span>
-		</li>
-	</ul> 
-
-
-
-<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2023/1852">Reduction from sparse LPN to LPN, Dual Attack 3.0
-				</a>
-				<br>
-			</span>
-			<span>
-				Kevin Carrier, Thomas Debris-Alazard, Charles Meyer-Hilfiger and Jean-Pierre Tillich
-				<br>
-			</span>
-			<span>
-				Eurocrypt 2024
-				<br>
-			</span>
-		</li>
-	</ul> 
-
-
-
-	<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2021/752">Quantum reduction of finding short code vectors to the decoding problem</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard, Maxime Remaud and Jean-Pierre Tillich
-				<br>
-			</span>
-			<span>
-				IEEE IT 2023
-				<br>
-			</span>
-		</li>
-	</ul>
-
-
-<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2022/1751">On the pseudorandomness of the decoding problem via the Oracle Comparison Problem
-				</a>
-				<br>
-			</span>
-			<span>
-				Maxime Bombar, Alain Couvreur and Thomas Debris-Alazard
-				<br>
-			</span>
-			<span>
-				Asiacrypt 2023
-				<br>
-			</span>
-		</li>
-	</ul> 
-
-
-
-<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2022/615">Smoothing codes and lattices: systematic study and new bounds
-				</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard, Léo Ducas, Nicolas Resch and Jean-Pierre Tillich
-				<br>
-			</span>
-			<span>
-				IEEE IT 2023
-				<br>
-			</span>
-		</li>
-	</ul> 
-
-
-
-
-<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2022/1000">Statistical Decoding 2.0: Reducing Decoding to LPN
-				</a>
-				<br>
-			</span>
-			<span>
-				Kevin Carrier, Thomas Debris-Alazard, Charles Meyer-Hilfiger and Jean-Pierre Tillich
-				<br>
-			</span>
-			<span>
-				Asiacrypt 2022
-				<br>
-			</span>
-		</li>
-	</ul> 
-
-
-
-
-<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2022/269">On codes and learning with errors over function fields
-				</a>
-				<br>
-			</span>
-			<span>
-				Maxime Bombar, Alain Couvreur and Thomas Debris-Alazard
-				<br>
-			</span>
-			<span>
-				Crypto 2022
-				<br>
-			</span>
-		</li>
-	</ul>
-
-	<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2020/869">An algorithmic reduction theory for binary codes: LLL and more</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard, Léo Ducas and Wessel P.J. van Woerden 
-				<br>
-			</span>
-			<span>
-				IEEE IT 2022 ; <a href="slidesLLL.pdf"> [Slides] </a> 
-				<br>
-			</span>
-		</li>
-	</ul>
-
-
-	<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2021/552">Classical and quantum algorithms for generic Syndrome Decoding problems and applications to the Lee metric</a>
-				<br>
-			</span>
-			<span>
-				André Chailloux, Thomas Debris-Alazard and Simona Etinski
-				<br>
-			</span>
-			<span>
-				PQCrypto 2021 
-				<br>
-			</span>
-		</li>
-	</ul>
-
-	
-	<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2020/006">Tight and optimal reductions for signatures based on average trapdoor preimage sampleable functions and applications to code-based signatures</a>
-				<br>
-			</span>
-			<span>
-				André Chailloux and Thomas Debris-Alazard
-				<br>
-			</span>
-			<span>
-				PKC 2020 ; <a href="slidesPKC.pdf"> [Slides] </a> 
-				<br>
-			</span>
-		</li>
-	</ul>
-
-
-	<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2018/996">Wave: a new family of trapdoor one-way preimage sampleable functions based on codes</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard, Nicolas Sendrier and Jean-Pierre Tillich
-				<br>
-			</span>
-			<span>
-				Asiacrypt 2019 (<strong>Best Paper Award</strong>) ; <a href="slidesWave.pdf"> [Slides] </a>
-				<br>
-			</span>
-		</li>
-	</ul>
-
-
-	<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2019/304">Ternary syndrome decoding with large weights</a>
-				<br>
-			</span>
-			<span>
-				Rémi Bricout, André Chailloux, Thomas Debris-Alazard and Matthieu Lequesne
-				<br>
-			</span>
-			<span>
-				SAC 2019
-				<br>
-			</span>
-		</li>
-	</ul>
-
-	<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2018/339">Two attacks on rank metric code-based schemes: Ranksign and an identity-based-encryption scheme</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard and Jean-Pierre Tillich 
-				<br>
-			</span>
-			<span>
-				Asiacrypt 2018 ; <a href="slidesRankSign.pdf"> [Slides] </a> 
-				<br>
-			</span>
-		</li>
-	</ul>
-
-
-	<ul>
-		<li>
-			<span>
-				<a href = "https://arxiv.org/abs/1701.07416">Statistical decoding</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard and Jean-Pierre Tillich 
-				<br>
-			</span>
-			<span>
-				Isit 2017 ; <a href="slidesDecoStat.pdf"> [Slides] </a> 
-				<br>
-			</span>
-		</li>
-	</ul>
-
-
-
-
-<h2> <FONT size="5pt"> Preprints </FONT> </h2>
-
-
-
-<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2022/1744">Worst and average case hardness of decoding via smoothing bounds
-				</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard and Nicolas Resch
-				<br>
-			</span>
-			<span>
-				eprint.iacr.org 2022
-				<br>
-			</span>
-		</li>
-	</ul> 
-
-
-
-
-
-
-<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2021/1432">Wavelet: code-based postquantum signatures with fast verification on microcontrollers
-				</a>
-				<br>
-			</span>
-			<span>
-				Gustavo Banegas, Thomas Debris-Alazard, Milena Nedeljković and Benjamin Smith
-				<br>
-			</span>
-			<span>
-				eprint.iacr.org 2021
-				<br>
-			</span>
-		</li>
-	</ul>
-
-
-
-
-
-	<ul>
-		<li>
-			<span>
-				<a href = "https://arxiv.org/abs/2011.04611">On the hardness of code equivalence problems in rank metric</a>
-				<br>
-			</span>
-			<span>
-				Alain Couvreur, Thomas Debris-Alazard and Philippe Gaborit 
-				<br>
-			</span>
-			<span>
-				arXiv 2020
-				<br>
-			</span>
-		</li>
-	</ul>
-
-	
-
-	<ul>
-		<li>
-			<span>
-				<a href = "https://eprint.iacr.org/2019/548">About wave implementation and its leakage immunity</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard, Nicolas Sendrier and Jean-Pierre Tillich 
-				<br>
-			</span>
-			<span>
-				eprint.iacr.org 2019
-				<br>
-			</span>
-		</li>
-	</ul>
-
-
-
-	<ul>
-		<li>
-			<span>
-				<a href = "https://arxiv.org/abs/1706.08065">The problem with the SURF scheme</a>
-				<br>
-			</span>
-			<span>
-				Thomas Debris-Alazard, Nicolas Sendrier and Jean-Pierre Tillich 
-				<br>
-			</span>
-			<span>
-				arXiv 2017
-				<br>
-			</span>
-		</li>
-	</ul>
-
-
-
-
-<a href= "https://eprint.iacr.org/2024/30"></a>
-
-
-
-</div>
-
-</div> 
-
-
-
-
+    <div id="wrap">
+        <header id="top">
+            <h2>Thomas Debris-Alazard</h2>
+        </header>
+
+        <main id="content" style="font-family:Verdana,Calibri;">
+            <section id="about">
+                <h2>About</h2>
+                <p>I am a research scientist (chargé de recherche) at <a href="https://www.inria.fr/fr">Inria</a> in the <a href="https://team.inria.fr/grace/">Grace</a> project-team and part-time assistant professor at École Polytechnique. My main research interests are code- and lattice-based cryptography.</p>
+                <div>
+                    <img class="profile-pic" src="photo2.jpeg" alt="Profile Picture">
+                    <img src="cezanne.jpg" alt="Montagne Sainte-Victoire by Paul Cézanne" height="130" style="width:280px;">
+                    <p>"Montagne Sainte-Victoire, Paul Cézanne."</p>
+                </div>
+                <div>
+                    <a href="Debris_CV.pdf">Resume (PDF)</a><br>
+                    <a href="https://scholar.google.com/citations?user=jWWLx-kAAAAJ&hl=en">Google Scholar Profile</a><br>
+                    <a href="https://dblp.org/pers/hd/d/Debris=Alazard:Thomas">DBLP</a>
+                </div>
+                <blockquote>
+                    <address>
+                        <strong>Address:</strong><br>
+                        École Polytechnique<br>
+                        91128 PALAISEAU CEDEX<br>
+                        Office 2047<br>
+                        <strong>E-mail:</strong> <a href="mailto:thomas.debris@inria.fr">thomas.debris@inria.fr</a>
+                    </address>
+                </blockquote>
+            </section>
+
+            <section id="teaching">
+                <h2>Teaching</h2>
+                <ul>
+                    <li>Code-based Cryptography (<a href="https://arxiv.org/pdf/2304.03541.pdf">lecture notes</a>, work in progress)
+                        <ul style="font-size: 0.9em;">
+                            <li><a href="lecture1.pdf">An intractable problem related to codes, decoding</a></li>
+                            <li><a href="lecture2.pdf">Random codes</a></li>
+                            <li><a href="lecture3.pdf">Information set decoding algorithms</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="quantum.html">Introduction to quantum computer science and applications</a> (INF587, École Polytechnique)</li>
+                </ul>
+            </section>
+
+            <section id="phd-students">
+                <h2>PhD Students</h2>
+                <ul>
+                    <li>Pierre Loisel (2023 -), co-advised with <a href="http://www.lix.polytechnique.fr/Labo/Alain.Couvreur/">Alain Couvreur</a></li>
+                    <li><a href="http://www.lix.polytechnique.fr/Labo/Maxime.BOMBAR/">Maxime Bombar</a> (2020 - 2023), defended on December 15, 2023, co-advised with <a href="http://www.lix.polytechnique.fr/Labo/Alain.Couvreur/">Alain Couvreur</a></li>
+                </ul>
+            </section>
+
+            <section id="scientific-activities">
+                <h2>Scientific Activities</h2>
+                <ul>
+                    <li><strong>Program Committee Member </strong><a href="https://eurocrypt.iacr.org/2025/callforpapers.php">Eurocrypt 2025</a>, <a href="https://pkc.iacr.org/2025/callforpapers.php">PKC 2025</a>, SAC 2025, CRYPTO 2025</li>
+                    <li><strong>Principal Investigator</strong> ANR JCJC COLA (COde- and LAttice-based cryptography)</li>
+                    <li><strong>Coordinator</strong> of the candidate scheme <a href="wave.html">Wave</a> for <a href="https://csrc.nist.gov/Projects/pqc-dig-sig/standardization"> NIST Post-Quantum standardization</a> (some <a href="wave.pdf"> slides</a>)</li>
+                </ul>
+            </section>
+            <section id="publications">
+                <h2>Publications</h2>
+                <ul>
+                    <li>
+                        <a href="https://arxiv.org/abs/2405.07666">New Solutions to Delsarte's Dual Linear Programs</a>
+                        <span class="authors">André Chailloux and Thomas Debris-Alazard</span>
+                        <span class="conference-title">IEEE IT 2024</span>
+                    </li>
+                    <li>
+                        <a href="https://eprint.iacr.org/2024/1134">Exploiting signature leakages: breaking Enhanced pqsigRM</a>
+                        <span class="authors">Thomas Debris-Alazard, Pierre Loisel, and Valentin Vasseur</span>
+                        <span class="conference-title">ISIT 2024</span>
+                    </li>
+                    <li>
+                        <a href="https://eprint.iacr.org/2024/30">Quantum Oblivious LWE Sampling and Insecurity of Standard Model Lattice-Based SNARKs</a>
+                        <span class="authors">Thomas Debris-Alazard, Pouria Fallahpour, and Damien Stehlé</span>
+                        <span class="conference-title">STOC 2024</span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2023/1852">Reduction from sparse LPN to LPN, Dual Attack 3.0</a>
+                        <span class="authors">Kevin Carrier, Thomas Debris-Alazard, Charles Meyer-Hilfiger and Jean-Pierre Tillich</span>
+                        <span class="conference-title">Eurocrypt 2024</span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2021/752">Quantum reduction of finding short code vectors to the decoding problem</a>
+                        <span class="authors">Thomas Debris-Alazard, Maxime Remaud and Jean-Pierre Tillich</span>
+                        <span class="conference-title">IEEE IT 2023</span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2022/1751">On the pseudorandomness of the decoding problem via the Oracle Comparison Problem</a>
+                        <span class="authors">Maxime Bombar, Alain Couvreur and Thomas Debris-Alazard</span>
+                        <span class="conference-title">Asiacrypt 2023</span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2022/615">Smoothing codes and lattices: systematic study and new bounds</a>
+                        <span class="authors">Thomas Debris-Alazard, Léo Ducas, Nicolas Resch and Jean-Pierre Tillich</span>
+                        <span class="conference-title">IEEE IT 2023</span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2022/1000">Statistical Decoding 2.0: Reducing Decoding to LPN</a>
+                        <span class="authors">Kevin Carrier, Thomas Debris-Alazard, Charles Meyer-Hilfiger and Jean-Pierre Tillich</span>
+                        <span class="conference-title">Asiacrypt 2022</span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2022/269">On codes and learning with errors over function fields</a>
+                        <span class="authors">Maxime Bombar, Alain Couvreur and Thomas Debris-Alazard</span>
+                        <span class="conference-title">Crypto 2022</span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2020/869">An algorithmic reduction theory for binary codes: LLL and more</a>
+                        <span class="authors">Thomas Debris-Alazard, Léo Ducas and Wessel P.J. van Woerden </span>
+                        <span class="conference-title">IEEE IT 2022 ; <a href="slidesLLL.pdf"> [Slides] </a> </span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2021/552">Classical and quantum algorithms for generic Syndrome Decoding problems and applications to the Lee metric</a>
+                        <span class="authors">André Chailloux, Thomas Debris-Alazard and Simona Etinski</span>
+                        <span class="conference-title">PQCrypto 2021</span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2021/552"><a href = "https://eprint.iacr.org/2020/006">Tight and optimal reductions for signatures based on average trapdoor preimage sampleable functions and applications to code-based signatures</a>
+                        <span class="authors">André Chailloux and Thomas Debris-Alazard</span>
+                        <span class="conference-title">PKC 2020 ; <a href="slidesPKC.pdf"> [Slides] </a> </span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2018/996">Wave: a new family of trapdoor one-way preimage sampleable functions based on codes</a>
+                        <span class="authors">Thomas Debris-Alazard, Nicolas Sendrier and Jean-Pierre Tillich</span>
+                        <span class="conference-title">Asiacrypt 2019 (<strong>Best Paper Award</strong>) ; <a href="slidesWave.pdf"> [Slides]</a></span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2019/304">Ternary syndrome decoding with large weights</a>
+                        <span class="authors">Rémi Bricout, André Chailloux, Thomas Debris-Alazard and Matthieu Lequesne</span>
+                        <span class="conference-title">SAC 2019</span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2018/339">Two attacks on rank metric code-based schemes: Ranksign and an identity-based-encryption scheme</a>
+                        <span class="authors">Thomas Debris-Alazard and Jean-Pierre Tillich</span>
+                        <span class="conference-title">Asiacrypt 2018 ; <a href="slidesRankSign.pdf"> [Slides]</a></span>
+                    </li>
+                    <li>
+                        <a href = "https://arxiv.org/abs/1701.07416">Statistical decoding</a>
+                        <span class="authors">Thomas Debris-Alazard and Jean-Pierre Tillich</span>
+                        <span class="conference-title">Isit 2017 ; <a href="slidesDecoStat.pdf"> [Slides]</a></span>
+                    </li>
+                    <!-- Additional publication entries here -->
+                </ul>
+            </section>
+
+            <section id="preprints">
+                <h2>Preprints</h2>
+                <ul>
+                    <li>
+                        <a href="https://eprint.iacr.org/2022/1744">Worst and average case hardness of decoding via smoothing bounds</a>
+                        <span class="authors">Thomas Debris-Alazard and Nicolas Resch</span>
+                        <span class="conference-title">eprint.iacr.org 2022</span>
+                    </li>
+                    <li>
+                        <a href="https://eprint.iacr.org/2021/1432">Wavelet: code-based postquantum signatures with fast verification on microcontrollers</a>
+                        <span class="authors">Gustavo Banegas, Thomas Debris-Alazard, Milena Nedeljković, and Benjamin Smith</span>
+                        <span class="conference-title">eprint.iacr.org 2021</span>
+                    </li>
+                    <!-- Additional preprint entries here -->
+                    <li>
+                        <a href="https://arxiv.org/abs/2011.04611">On the hardness of code equivalence problems in rank metric</a>
+                        <span class="authors">Alain Couvreur, Thomas Debris-Alazard and Philippe Gaborit</span>
+                        <span class="conference-title">arXiv 2020</span>
+                    </li>
+                    <li>
+                        <a href = "https://eprint.iacr.org/2019/548">About wave implementation and its leakage immunity</a>
+                        <span class="authors">Thomas Debris-Alazard, Nicolas Sendrier and Jean-Pierre Tillich</span>
+                        <span class="conference-title">eprint.iacr.org 2019</span>
+                    </li>
+                    <li>
+                        <a href = "https://arxiv.org/abs/1706.08065">The problem with the SURF scheme</a>
+                        <span class="authors">Thomas Debris-Alazard, Nicolas Sendrier and Jean-Pierre Tillich</span>
+                        <span class="conference-title">arXiv 2017</span>
+                    </li>
+                </ul>
+            </section>
+
+            
+
+            <section id="manuscript">
+                <h2>Manuscript</h2>
+                <ul>
+                    <li><a href="https://tel.archives-ouvertes.fr/tel-02424234v1">PhD</a> (in French), defended on December 17, 2019</li>
+                </ul>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
