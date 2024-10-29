@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Letter Frequency Distribution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<h1>English Letter Frequency Distribution</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Letter</th>
+            <th>Probability</th>
+        </tr>
+    </thead>
+    <tbody>
+        <script>
+            // Frequency distribution of letters in English
+            const letterFrequencies = {
+                "A": 0.08167, "B": 0.01492, "C": 0.02782, "D": 0.04253, "E": 0.12702,
+                "F": 0.02228, "G": 0.02015, "H": 0.06094, "I": 0.06966, "J": 0.00153,
+                "K": 0.00772, "L": 0.04025, "M": 0.02406, "N": 0.06749, "O": 0.07507,
+                "P": 0.01929, "Q": 0.00095, "R": 0.05987, "S": 0.06327, "T": 0.09056,
+                "U": 0.02758, "V": 0.00978, "W": 0.02360, "X": 0.00150, "Y": 0.01974,
+                "Z": 0.00074
+            };
+
+            let tableBody = document.querySelector("tbody");
+
+            for (const letter in letterFrequencies) {
+                let probability = letterFrequencies[letter];
+
+                // Create table row and cells
+                let row = document.createElement("tr");
+                let cellLetter = document.createElement("td");
+                let cellProbability = document.createElement("td");
+
+                // Set cell content
+                cellLetter.textContent = letter;
+                cellProbability.textContent = probability.toFixed(5); // Display probability with 5 decimal places
+
+                // Append cells to row
+                row.appendChild(cellLetter);
+                row.appendChild(cellProbability);
+
+                // Append row to table
+                tableBody.appendChild(row);
+            }
+        </script>
+    </tbody>
+</table>
+
+</body>
+</html>
