@@ -3,95 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extracting Text from an HTML Page</title>
+    <title>Python HTML Text Extractor</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f7f7f7;
+            background-color: #f4f4f9;
+            margin: 20px;
         }
         h1 {
+            text-align: center;
             color: #333;
         }
         .code-container {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
+            background-color: #2d2d2d;
+            color: #f8f8f2;
             padding: 20px;
             border-radius: 8px;
-            white-space: pre-wrap;
             font-family: Consolas, monospace;
+            overflow-x: auto;
         }
-        <meta charset="UTF-8">
-        <title>Hidden File Download</title>
-        <style>
-        #downloadSection {
-            padding: 20px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            width: 200px;
-            text-align: center;
-            cursor: pointer;
+        .comment {
+            color: #75715e;
         }
-        #downloadSection:hover {
-            background-color: #d0d0d0;
+        .keyword {
+            color: #66d9ef;
+        }
+        .string {
+            color: #e6db74;
+        }
+        .function {
+            color: #a6e22e;
+        }
+        .variable {
+            color: #f92672;
         }
     </style>
 </head>
 <body>
 
-<h1>Extracting Text from an HTML Page with Python</h1>
-
-<p>This code uses the Python libraries <strong>BeautifulSoup</strong> and <strong>requests</strong> to extract and clean text from an HTML page. It replaces &lt;br&gt; and &lt;p&gt; tags with line breaks and saves the cleaned text in a .txt file.</p>
+<h1>Python HTML Text Extractor</h1>
 
 <div class="code-container">
 <pre>
-from bs4 import BeautifulSoup
-import requests
+<span class="comment">### Extract as a .txt without html symbols the content from HTML page</span>
 
-# Function to extract and clean text from HTML page while preserving line breaks
-def extract_text_from_html(url, output_filename):
-    # Step 1: Fetch the HTML content from the URL
-    response = requests.get(url)
-    if response.status_code != 200:
-        print("Error: Unable to fetch the page.")
-        return
+<span class="keyword">from</span> <span class="variable">bs4</span> <span class="keyword">import</span> <span class="variable">BeautifulSoup</span>
+<span class="keyword">import</span> <span class="variable">requests</span>
+
+<span class="comment"># Function to extract and clean text from HTML page while preserving line breaks</span>
+<span class="keyword">def</span> <span class="function">extract_text_from_html</span>(<span class="variable">url</span>, <span class="variable">output_filename</span>):
+
+    <span class="comment"># Step 1: Fetch the HTML content from the URL</span>
+    <span class="variable">response</span> = <span class="variable">requests</span>.get(<span class="variable">url</span>)
+    <span class="keyword">if</span> <span class="variable">response</span>.status_code != 200:
+        <span class="variable">print</span>(<span class="string">"Error: Unable to fetch the page."</span>)
+        <span class="keyword">return</span>
     
-    # Step 2: Parse HTML with BeautifulSoup
-    soup = BeautifulSoup(response.content, 'html.parser')
+    <span class="comment"># Step 2: Parse HTML with BeautifulSoup</span>
+    <span class="variable">soup</span> = <span class="variable">BeautifulSoup</span>(<span class="variable">response</span>.content, <span class="string">'html.parser'</span>)
     
-    # Step 3: Replace &lt;br&gt; and &lt;p&gt; tags with newline characters
-    for br in soup.find_all("br"):
-        br.replace_with("\n")
-    for p in soup.find_all("p"):
-        p.insert_after("\n")
+    <span class="comment"># Step 3: Replace &lt;br&gt; and &lt;p&gt; tags with newline characters</span>
+    <span class="keyword">for</span> <span class="variable">br</span> <span class="keyword">in</span> <span class="variable">soup</span>.find_all(<span class="string">"br"</span>):
+        <span class="variable">br</span>.replace_with(<span class="string">"\n"</span>)
+    <span class="keyword">for</span> <span class="variable">p</span> <span class="keyword">in</span> <span class="variable">soup</span>.find_all(<span class="string">"p"</span>):
+        <span class="variable">p</span>.insert_after(<span class="string">"\n"</span>)
 
-    # Step 4: Extract text while preserving line breaks
-    text = soup.get_text()
+    <span class="comment"># Step 4: Extract text while preserving line breaks</span>
+    <span class="variable">text</span> = <span class="variable">soup</span>.get_text()
 
-    # Step 5: Clean the text (remove any excessive whitespace but preserve newlines)
-    lines = [line.strip() for line in text.splitlines() if line.strip()]
-    clean_text = "\n".join(lines)
+    <span class="comment"># Step 5: Clean the text (remove any excessive whitespace but preserve newlines)</span>
+    <span class="variable">lines</span> = [<span class="variable">line</span>.strip() <span class="keyword">for</span> <span class="variable">line</span> <span class="keyword">in</span> <span class="variable">text</span>.splitlines() <span class="keyword">if</span> <span class="variable">line</span>.strip()]
+    <span class="variable">clean_text</span> = <span class="string">"\n"</span>.join(<span class="variable">lines</span>)
 
-    # Step 6: Write the cleaned text to a .txt file
-    with open(output_filename, 'w', encoding='utf-8') as file:
-        file.write(clean_text)
+    <span class="comment"># Step 6: Write the cleaned text to a .txt file</span>
+    <span class="keyword">with</span> <span class="variable">open</span>(<span class="variable">output_filename</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> <span class="variable">file</span>:
+        <span class="variable">file</span>.write(<span class="variable">clean_text</span>)
     
-    print(f"Text extracted and saved to {output_filename}")
+    <span class="variable">print</span>(<span class="string">f"Text extracted and saved to {output_filename}"</span>)
 
-# Example usage
-url = "http://abu.cnam.fr/cgi-bin/donner_html?machine3"  # Replace with the URL of the HTML page you want to extract text from
-output_filename = "/Users/tdebris/Desktop/Programmation/SageMath/pascal.txt"  # Replace with your desired output file path
-extract_text_from_html(url, output_filename)
+<span class="comment"># Example usage</span>
+<span class="variable">url</span> = <span class="string">"http://abu.cnam.fr/cgi-bin/donner_html?machine3"</span>  <span class="comment"># Replace with the URL of the HTML page you want to extract text from</span>
+<span class="variable">output_filename</span> = <span class="string">"/Users/tdebris/Desktop/Programmation/SageMath/pascal.txt"</span>  <span class="comment"># Replace with your desired output file path</span>
 
-
-Click <a href="pascal.txt" download="pascal.txt">here</a> to download a file extracted from this method via <a href ='http://abu.cnam.fr/cgi-bin/go?machine3'>http://abu.cnam.fr/cgi-bin/go?machine3</a>
-
+<span class="variable">extract_text_from_html</span>(<span class="variable">url</span>, <span class="variable">output_filename</span>)
 </pre>
-
 </div>
-
-
 
 </body>
 </html>

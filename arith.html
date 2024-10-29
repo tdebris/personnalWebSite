@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Decoding Function in SageMath</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .code-container {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: Consolas, monospace;
+            overflow-x: auto;
+        }
+        .comment {
+            color: #75715e;
+        }
+        .keyword {
+            color: #66d9ef;
+        }
+        .string {
+            color: #e6db74;
+        }
+        .function {
+            color: #a6e22e;
+        }
+        .variable {
+            color: #f92672;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Arithmetic Decoding Function in SageMath</h1>
+
+<div class="code-container">
+<pre>
+<span class="comment"># Arithmetic Decoding function</span>
+<span class="keyword">def</span> <span class="function">arithmetic_decode</span>(<span class="variable">encoded_value</span>, <span class="variable">symbol_probs</span>, <span class="variable">sequence_length</span>):
+    <span class="comment">"""
+    Decode an arithmetically encoded value.
+
+    encoded_value : float
+        The encoded value between 0 and 1 representing the sequence.
+    symbol_probs : dict
+        Dictionary of symbols and their probabilities, e.g., {'A': 0.5, 'B': 0.3, 'C': 0.2}.
+    sequence_length : int
+        Length of the sequence to decode.
+        
+    Returns:
+        The decoded sequence as a list of symbols.
+    """</span>
+    <span class="comment"># Calculate cumulative intervals for each symbol</span>
+    <span class="variable">cumulative_probs</span> = {}
+    <span class="variable">cumulative</span> = 0.0
+    <span class="keyword">for</span> <span class="variable">symbol</span>, <span class="variable">prob</span> <span class="keyword">in</span> <span class="variable">symbol_probs</span>.items():
+        <span class="variable">cumulative_probs</span>[<span class="variable">symbol</span>] = (<span class="variable">cumulative</span>, <span class="variable">cumulative</span> + <span class="variable">prob</span>)
+        <span class="variable">cumulative</span> += <span class="variable">prob</span>
+
+    <span class="variable">decoded_sequence</span> = []
+    <span class="variable">value</span> = <span class="variable">encoded_value</span>
+
+    <span class="comment"># Decode each symbol in the sequence based on the intervals</span>
+    <span class="keyword">for</span> <span class="variable">_</span> <span class="keyword">in</span> <span class="keyword">range</span>(<span class="variable">sequence_length</span>):
+        <span class="comment"># Find the symbol that matches the current interval</span>
+        <span class="keyword">for</span> <span class="variable">symbol</span>, (<span class="variable">low</span>, <span class="variable">high</span>) <span class="keyword">in</span> <span class="variable">cumulative_probs</span>.items():
+            <span class="keyword">if</span> <span class="variable">low</span> <= <span class="variable">value</span> <span class="keyword"><</span> <span class="variable">high</span>:
+                <span class="variable">decoded_sequence</span>.append(<span class="variable">symbol</span>)
+                <span class="comment"># Narrow down the value to the interval for the next symbol</span>
+                <span class="variable">value</span> = (<span class="variable">value</span> - <span class="variable">low</span>) / (<span class="variable">high</span> - <span class="variable">low</span>)
+                <span class="keyword">break</span>
+
+    <span class="keyword">return</span> <span class="variable">decoded_sequence</span>
+</pre>
+</div>
+
+</body>
+</html>
