@@ -22,6 +22,20 @@
             white-space: pre-wrap;
             font-family: Consolas, monospace;
         }
+        <meta charset="UTF-8">
+        <title>Hidden File Download</title>
+        <style>
+        #downloadSection {
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #downloadSection:hover {
+            background-color: #d0d0d0;
+        }
     </style>
 </head>
 <body>
@@ -69,8 +83,15 @@ def extract_text_from_html(url, output_filename):
 url = "http://abu.cnam.fr/cgi-bin/donner_html?machine3"  # Replace with the URL of the HTML page you want to extract text from
 output_filename = "/Users/tdebris/Desktop/Programmation/SageMath/pascal.txt"  # Replace with your desired output file path
 extract_text_from_html(url, output_filename)
+
+
+Click <a href="pascal.txt" download="pascal.txt">here</a> to download a file extracted from this method via <a href ='http://abu.cnam.fr/cgi-bin/go?machine3'>http://abu.cnam.fr/cgi-bin/go?machine3</a>
+
 </pre>
+
 </div>
+
+
 
 </body>
 </html>
