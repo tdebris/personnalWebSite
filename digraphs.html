@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All English Letter Digraphs with Probabilities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<h1>All English Letter Digraphs with Probabilities</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Digram</th>
+            <th>Probability</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Digraphs and probabilities generated from AA to ZZ -->
+        <script>
+            const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const probabilities = {
+                "TH": 0.0356, "HE": 0.0307, "IN": 0.0243, "ER": 0.0205, "AN": 0.0199,
+                "RE": 0.0185, "ON": 0.0176, "AT": 0.0149, "EN": 0.0145, "ND": 0.0135,
+                "TI": 0.0134, "ES": 0.0134, "OR": 0.0128, "TE": 0.0120, "OF": 0.0117,
+                "ED": 0.0117, "IS": 0.0113, "IT": 0.0112, "AL": 0.0109, "AR": 0.0107,
+                "ST": 0.0105, "TO": 0.0104, "NT": 0.0104, "HA": 0.0100, "NG": 0.0095,
+                "OU": 0.0093, "EA": 0.0090, "HI": 0.0088, "ME": 0.0085, "HI": 0.0083,
+                "UT": 0.0078, "SE": 0.0075, "ET": 0.0072, "LE": 0.0071, "SA": 0.0068,
+                "SO": 0.0066, "LI": 0.0065, "VE": 0.0063, "RA": 0.0061, "LO": 0.0060,
+                "DE": 0.0059, "RO": 0.0057, "MA": 0.0056, "NO": 0.0055, "US": 0.0054,
+                "SI": 0.0052, "HE": 0.0051, "MO": 0.0050, "NE": 0.0049, "LA": 0.0048,
+                "DI": 0.0047, "CO": 0.0046, "TA": 0.0045, "EL": 0.0044, "LA": 0.0043,
+                "IC": 0.0042, "NC": 0.0041, "MA": 0.0040, "NA": 0.0039, "CE": 0.0038,
+                "HO": 0.0037, "RI": 0.0036, "LI": 0.0035, "MI": 0.0034, "BE": 0.0033,
+                "AI": 0.0032, "CA": 0.0031, "SA": 0.0030, "LO": 0.0029, "PE": 0.0028,
+                "IL": 0.0027, "SE": 0.0026, "AM": 0.0025, "VE": 0.0024, "VI": 0.0023,
+                "OP": 0.0022, "WA": 0.0021, "WO": 0.0020, "RA": 0.0019, "GE": 0.0018,
+                "TE": 0.0017, "RY": 0.0016, "GI": 0.0015, "YE": 0.0014, "LI": 0.0013,
+                "LY": 0.0012, "ME": 0.0011, "ST": 0.0010
+                // Add more known digram probabilities if available
+            };
+
+            let tableBody = document.querySelector("tbody");
+
+            for (let i = 0; i < alphabet.length; i++) {
+                for (let j = 0; j < alphabet.length; j++) {
+                    let digram = alphabet[i] + alphabet[j];
+                    let probability = probabilities[digram] || "N/A"; // Default to "N/A" if probability is unknown
+                    
+                    // Create table row and cells
+                    let row = document.createElement("tr");
+                    let cellDigram = document.createElement("td");
+                    let cellProbability = document.createElement("td");
+                    
+                    // Set cell content
+                    cellDigram.textContent = digram;
+                    cellProbability.textContent = probability;
+                    
+                    // Append cells to row
+                    row.appendChild(cellDigram);
+                    row.appendChild(cellProbability);
+                    
+                    // Append row to table
+                    tableBody.appendChild(row);
+                }
+            }
+        </script>
+    </tbody>
+</table>
+
+</body>
+</html>
